@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-funky: 'Titan One', cursive, -apple-system, sans-serif;
+    --font-bungee: 'Bungee', cursive, -apple-system, sans-serif;
+    --font-lilita: 'Lilita One', cursive, -apple-system, sans-serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Brand Colors from Logo */
+    --brand-blue-deep: #050b18;
+    --brand-blue-card: #091533;
+    --brand-blue-surface: #0f214d;
+    --brand-blue-electric: #2563eb;
+    --brand-gold-glow: #f59e0b;
+    --brand-orange: #ea580c;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #050b18;
+    color: #f1f5f9;
+  }
+
+  .font-funky {
+    font-family: var(--font-funky);
+    letter-spacing: 0.02em;
+  }
+
+  .font-bungee {
+    font-family: var(--font-bungee);
+    letter-spacing: 0.03em;
+  }
+
+  .font-lilita {
+    font-family: var(--font-lilita);
+    letter-spacing: 0.02em;
+  }
+
+  .font-mono-nums {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* 3D Funky Text Shadow Effects inspired by the Logo */
+.text-3d-gold {
+  color: #fbbf24;
+  text-shadow:
+    1px 1px 0px #f59e0b,
+    2px 2px 0px #d97706,
+    3px 3px 0px #b45309,
+    4px 4px 0px #78350f,
+    5px 6px 12px rgba(0, 0, 0, 0.9);
+}
+
+.text-3d-orange {
+  color: #ffedd5;
+  background: linear-gradient(180deg, #fef08a 0%, #fbbf24 40%, #ea580c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(2px 3px 0px #9a3412) drop-shadow(4px 6px 10px rgba(0, 0, 0, 0.8));
+}
+
+.text-3d-blue {
+  color: #ffffff;
+  background: linear-gradient(180deg, #ffffff 0%, #bae6fd 45%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(2px 3px 0px #1e40af) drop-shadow(4px 6px 10px rgba(0, 0, 0, 0.8));
+}
+
+.text-3d-pop {
+  text-shadow:
+    2px 2px 0px #09132b,
+    3px 4px 0px #030712,
+    4px 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+/* Chunky 3D Pop Buttons */
+.btn-3d-gold {
+  background: linear-gradient(180deg, #fde047 0%, #f59e0b 60%, #d97706 100%);
+  color: #1c1917;
+  border-bottom: 4px solid #92400e;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35);
+  transition: all 0.15s ease-out;
+}
+.btn-3d-gold:hover {
+  background: linear-gradient(180deg, #fef08a 0%, #fbbf24 60%, #d97706 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.45);
+}
+.btn-3d-gold:active {
+  transform: translateY(3px);
+  border-bottom-width: 1px;
+  box-shadow: 0 1px 4px rgba(245, 158, 11, 0.2);
+}
+
+.btn-3d-blue {
+  background: linear-gradient(180deg, #38bdf8 0%, #2563eb 60%, #1d4ed8 100%);
+  color: #ffffff;
+  border-bottom: 4px solid #1e3a8a;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+  transition: all 0.15s ease-out;
+}
+.btn-3d-blue:hover {
+  background: linear-gradient(180deg, #60a5fa 0%, #3b82f6 60%, #1d4ed8 100%);
+  transform: translateY(-1px);
+}
+.btn-3d-blue:active {
+  transform: translateY(3px);
+  border-bottom-width: 1px;
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050b18;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e3a8a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}

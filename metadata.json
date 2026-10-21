@@ -1,0 +1,6 @@
+{
+  "name": "Chubbyz Maboneng",
+  "description": "Official website for Chubbyz (Chubby Boyz) in Maboneng, Johannesburg. Featuring smash burgers, loaded kotas, slap chips, and Uber Eats delivery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
