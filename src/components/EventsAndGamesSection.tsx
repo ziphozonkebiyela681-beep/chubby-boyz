@@ -1,6 +1,25 @@
 import React, { useState } from 'react';
-import { Tv, Gamepad2, Users, Calendar, Clock, MessageSquare, Sparkles, Trophy, Flame } from 'lucide-react';
-import { EVENT_GAME_NIGHT_IMAGE, STORE_INFO } from '../data/menuData';
+import {
+  Tv,
+  Gamepad2,
+  Users,
+  Calendar,
+  Clock,
+  MessageSquare,
+  Sparkles,
+  Trophy,
+  Flame,
+  Dices,
+  Sparkle,
+  Share2,
+  MapPin,
+  ExternalLink,
+} from 'lucide-react';
+import {
+  HANGOVER_TUESDAY_IMAGE,
+  SPORTS_SCREENING_IMAGE,
+  STORE_INFO,
+} from '../data/menuData';
 
 export const EventsAndGamesSection: React.FC = () => {
   const [crewSize, setCrewSize] = useState('4');
@@ -12,12 +31,12 @@ export const EventsAndGamesSection: React.FC = () => {
   const handleWhatsAppBooking = (e: React.FormEvent) => {
     e.preventDefault();
     let text = `*TABLE BOOKING - CHUBBY BOYZ (289 Fox St, Jeppestown)*\n\n`;
-    if (contactName) text += `*Name:* ${contactName}\n`;
+    if (contactName) text += `*Name / Crew:* ${contactName}\n`;
     text += `*Event:* ${eventType}\n`;
     text += `*Day / Date:* ${selectedDay}\n`;
     text += `*Time:* ${bookingTime}\n`;
     text += `*Crew Size:* ${crewSize} people\n\n`;
-    text += `Hey Chubby Boyz! We want to book a table for our crew to watch sports / play games and order some burgers and combos!`;
+    text += `Hey Chubby Boyz! We want to reserve a table for our crew to watch sports / play games and order some smash burgers, gatsbys and combos!`;
 
     const encoded = encodeURIComponent(text);
     window.open(`https://wa.me/${STORE_INFO.whatsappNumber}?text=${encoded}`, '_blank');
@@ -27,210 +46,266 @@ export const EventsAndGamesSection: React.FC = () => {
     <section id="events" className="py-16 lg:py-24 bg-[#050b18] border-b-2 border-blue-900/40 scroll-mt-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/30 text-xs font-funky text-amber-400 uppercase tracking-widest mb-3">
             <Sparkles className="w-4 h-4 text-amber-400" />
-            <span>Maboneng &amp; Jeppestown Nightlife</span>
+            <span>289 Fox Street · Open Till Late</span>
           </div>
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-funky tracking-tight leading-tight">
-            <span className="text-3d-orange">LIVE SPORTS</span> &amp;{' '}
-            <span className="text-3d-blue">GAME NIGHTS</span>
+            <span className="text-3d-orange">HANGOVER TUESDAYS</span> &amp;{' '}
+            <span className="text-3d-blue">LIVE SPORTS</span>
           </h2>
           <p className="mt-3 text-base sm:text-lg text-blue-200/90 font-medium leading-relaxed">
-            Every Tuesday is <strong className="text-amber-400">Hangover Tuesday</strong>! Bring your crew to 289 Fox Street, play board games, Jenga &amp; cards, watch live matches on the big screens, and feast on massive combos open till late.
+            Chubby Boyz is more than a burger joint — it is Jeppestown and Maboneng&apos;s ultimate late-night cultural hub.
+            Whether you&apos;re bringing your crew to battle over dice and charades or chanting with fellow fans during the big game, our doors stay open late.
           </p>
         </div>
 
-        {/* 2-Column Showcase: Event Card Left + Live Booking Form Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
-          {/* Left Column: Atmospheric Photo & Feature Cards */}
-          <div className="lg:col-span-7 flex flex-col justify-between space-y-6">
-            {/* Main Visual Card */}
-            <div className="relative rounded-3xl overflow-hidden border-2 border-blue-600/50 shadow-2xl bg-blue-950 group">
-              <img
-                src={EVENT_GAME_NIGHT_IMAGE}
-                alt="Friends playing games and watching live sports at Chubby Boyz Fox St"
-                referrerPolicy="no-referrer"
-                className="w-full h-[320px] sm:h-[400px] object-cover transition-transform duration-700 group-hover:scale-103"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050b18] via-[#050b18]/40 to-transparent" />
+        {/* Feature 1: Hangover Tuesday Game Nights */}
+        <div className="mb-20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-blue-950/40 border-2 border-blue-800/40 rounded-3xl p-6 sm:p-10 shadow-2xl">
+          <div className="lg:col-span-7 space-y-5">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-xl bg-amber-400 text-stone-950 font-funky text-xs uppercase tracking-wider shadow-md">
+              <Dices className="w-4 h-4 text-stone-950" />
+              <span>Midweek Crew Ritual · Every Tuesday</span>
+            </div>
 
-              {/* Badges on image */}
-              <div className="absolute top-4 left-4 flex flex-wrap gap-2">
-                <span className="px-3 py-1 rounded-xl bg-amber-400 text-stone-950 font-funky text-xs uppercase shadow-md">
-                  ★ Hangover Tuesdays
-                </span>
-                <span className="px-3 py-1 rounded-xl bg-blue-600 text-white font-funky text-xs uppercase shadow-md">
-                  Live Big Screen Sports
-                </span>
+            <h3 className="text-2xl sm:text-4xl font-funky text-white leading-tight">
+              THE VIBE: <span className="text-amber-400">HANGOVER TUESDAY</span> GAME NIGHTS
+            </h3>
+
+            {/* Evocative passage describing atmosphere */}
+            <div className="space-y-4 text-sm sm:text-base text-blue-100/90 leading-relaxed font-medium">
+              <p>
+                Step inside 289 Fox Street as the sun dips below the Joburg skyline. The warm neon glow of the Chubby Boyz sign reflects across cobalt brick walls, filling the room with an irresistible, electric hum. Hangover Tuesday is where the entire city comes to decompress, laugh without boundaries, and leave weekday stress at the door.
+              </p>
+              <p>
+                Across rustic timber tables, colorful dice clatter on trays, cards are fiercely dealt in heated Uno and Morabaraba face-offs, and uproarious bursts of laughter erupt as friends act out animated charades and try to outwit each other. Between competitive rounds, platters of golden loaded slap chips, 5-patty Big Boy smash burgers, and icy sodas get passed around the circle. It is pure camaraderie, unpretentious warmth, and good vibes that roll on deep into the early hours.
+              </p>
+            </div>
+
+            {/* Highlights pill tags */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+              <div className="p-3 rounded-xl bg-blue-900/40 border border-blue-700/50">
+                <div className="font-funky text-amber-400 text-sm">Cards &amp; Dice</div>
+                <div className="text-[11px] text-blue-300 font-medium">Uno, Poker, Dominoes &amp; Dice</div>
               </div>
-
-              <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-blue-950/90 border border-blue-700/50 backdrop-blur-md flex items-center justify-between text-xs">
-                <div>
-                  <div className="font-funky text-white text-sm">289 Fox Street, Jeppestown</div>
-                  <div className="text-blue-300 font-medium">Big screens · Sound system · Board games provided</div>
-                </div>
-                <div className="text-right">
-                  <span className="text-amber-400 font-funky text-sm">OPEN TILL LATE</span>
-                </div>
+              <div className="p-3 rounded-xl bg-blue-900/40 border border-blue-700/50">
+                <div className="font-funky text-amber-400 text-sm">Charades &amp; Games</div>
+                <div className="text-[11px] text-blue-300 font-medium">Bring your crew &amp; play all night</div>
+              </div>
+              <div className="p-3 rounded-xl bg-blue-900/40 border border-blue-700/50 col-span-2 sm:col-span-1">
+                <div className="font-funky text-amber-400 text-sm">Open Till Late</div>
+                <div className="text-[11px] text-blue-300 font-medium">Comfort food &amp; drinks on flow</div>
               </div>
             </div>
 
-            {/* 2 Feature Highlights */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-5 rounded-2xl bg-blue-950/70 border-2 border-blue-800/40 shadow-lg space-y-2">
-                <div className="flex items-center gap-2.5 text-amber-400 font-funky text-base">
-                  <Gamepad2 className="w-5 h-5 text-amber-400" />
-                  <span>Hangover Tuesday</span>
+            <div className="pt-2">
+              <a
+                href={`https://wa.me/${STORE_INFO.whatsappNumber}?text=Hey%20Chubby%20Boyz!%20I%20want%20to%20reserve%20a%20table%20for%20our%20crew%20for%20Hangover%20Tuesday%20Game%20Night!`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3.5 text-xs font-funky uppercase tracking-wider btn-3d-gold rounded-xl shadow-lg"
+              >
+                <MessageSquare className="w-4 h-4 text-stone-950 stroke-[3]" />
+                <span>Reserve Game Night Table · WhatsApp: 076 294 5349</span>
+              </a>
+            </div>
+          </div>
+
+          <div className="lg:col-span-5">
+            <div className="relative rounded-3xl overflow-hidden border-2 border-amber-400/50 shadow-2xl group">
+              <img
+                src={HANGOVER_TUESDAY_IMAGE}
+                alt="Crew playing cards, rolling dice and acting charades at Chubby Boyz on 289 Fox Street"
+                referrerPolicy="no-referrer"
+                className="w-full h-[360px] sm:h-[440px] object-cover transition-transform duration-700 group-hover:scale-103"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050b18] via-transparent to-transparent opacity-80" />
+              <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-blue-950/90 border border-amber-400/30 backdrop-blur-md">
+                <div className="font-funky text-amber-400 text-sm flex items-center justify-between">
+                  <span>Authentic Chubby Boyz Night</span>
+                  <span className="text-white text-xs">289 Fox St</span>
                 </div>
-                <p className="text-xs text-blue-200/80 font-medium leading-relaxed">
-                  The ultimate midweek recharge. Gather your crew for Uno, Jenga, dominoes, cards, and trivia with loaded slap chips and ice-cold drinks.
+                <p className="text-xs text-blue-200 mt-1">
+                  Card games, rolling dice, charades, and laughing with the crew till late!
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
 
-              <div className="p-5 rounded-2xl bg-blue-950/70 border-2 border-blue-800/40 shadow-lg space-y-2">
-                <div className="flex items-center gap-2.5 text-sky-400 font-funky text-base">
-                  <Tv className="w-5 h-5 text-sky-400" />
-                  <span>Live Sports Stadium Vibe</span>
+        {/* Feature 2: Live Big Screen Sports Screenings */}
+        <div className="mb-20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-blue-950/40 border-2 border-blue-800/40 rounded-3xl p-6 sm:p-10 shadow-2xl">
+          <div className="lg:col-span-5 order-2 lg:order-1">
+            <div className="relative rounded-3xl overflow-hidden border-2 border-sky-400/50 shadow-2xl group">
+              <img
+                src={SPORTS_SCREENING_IMAGE}
+                alt="Fans cheering at big screen football and rugby match at Chubby Boyz on 289 Fox Street"
+                referrerPolicy="no-referrer"
+                className="w-full h-[360px] sm:h-[440px] object-cover transition-transform duration-700 group-hover:scale-103"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050b18] via-transparent to-transparent opacity-80" />
+              <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-blue-950/90 border border-sky-400/30 backdrop-blur-md">
+                <div className="font-funky text-sky-400 text-sm flex items-center justify-between">
+                  <span>Matchday Stadium Roar</span>
+                  <span className="text-white text-xs">Big Screens</span>
                 </div>
-                <p className="text-xs text-blue-200/80 font-medium leading-relaxed">
-                  Premier League, PSL, Champions League, and Springbok Rugby live with loud sound, electric vibes, and the 5-patty Big Boy burger!
+                <p className="text-xs text-blue-200 mt-1">
+                  PSL, Premier League, Champions League, and Springbok Rugby with live sound!
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Right Column: WhatsApp Table Reservation Box */}
-          <div className="lg:col-span-5 flex flex-col">
-            <div className="h-full rounded-3xl bg-gradient-to-b from-[#0b1736] via-[#091533] to-[#050b18] border-2 border-amber-400/60 p-6 sm:p-8 shadow-2xl flex flex-col justify-between">
+          <div className="lg:col-span-7 space-y-5 order-1 lg:order-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-xl bg-sky-500 text-stone-950 font-funky text-xs uppercase tracking-wider shadow-md">
+              <Tv className="w-4 h-4 text-stone-950" />
+              <span>Big Screen Stadium Atmosphere</span>
+            </div>
+
+            <h3 className="text-2xl sm:text-4xl font-funky text-white leading-tight">
+              LIVE SPORTS: <span className="text-sky-400">FEEL THE STADIUM CHANT</span>
+            </h3>
+
+            {/* Evocative passage describing atmosphere */}
+            <div className="space-y-4 text-sm sm:text-base text-blue-100/90 leading-relaxed font-medium">
+              <p>
+                When matchday arrives, 289 Fox Street transforms into a miniature stadium in the heart of Johannesburg. Wall-to-wall high-definition projectors beam every tackle, strike, and photo-finish, while stadium-grade audio brings every whistle and roar straight to your wooden bench.
+              </p>
+              <p>
+                From heated Soweto Derbies and Premier League clashes to adrenaline-fueled Springbok Rugby test matches, the atmosphere is pure fire. Supporter jerseys fill the booths, hands wave flags in unison, and strangers turn into brothers over every stoppage-time goal. Order the R350 Masala Tika Beef Gatsby or the Chubby Buddies Combo to feed the entire table while cold beverages keep the celebrations flowing.
+              </p>
+            </div>
+
+            {/* Highlights pill tags */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+              <div className="p-3 rounded-xl bg-blue-900/40 border border-blue-700/50">
+                <div className="font-funky text-sky-300 text-sm">Crystal Big Screens</div>
+                <div className="text-[11px] text-blue-300 font-medium">Zero blind spots from any table</div>
+              </div>
+              <div className="p-3 rounded-xl bg-blue-900/40 border border-blue-700/50">
+                <div className="font-funky text-sky-300 text-sm">Gatsby &amp; Combos</div>
+                <div className="text-[11px] text-blue-300 font-medium">Feast with 4-6 crew mates</div>
+              </div>
+              <div className="p-3 rounded-xl bg-blue-900/40 border border-blue-700/50 col-span-2 sm:col-span-1">
+                <div className="font-funky text-sky-300 text-sm">Full Audio Commentary</div>
+                <div className="text-[11px] text-blue-300 font-medium">Crisp commentary &amp; match energy</div>
+              </div>
+            </div>
+
+            <div className="pt-2">
+              <a
+                href={`https://wa.me/${STORE_INFO.whatsappNumber}?text=Hey%20Chubby%20Boyz!%20I%20want%20to%20reserve%20a%20table%20to%20watch%20the%20big%20game%20live%20on%20the%20big%20screens!`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3.5 text-xs font-funky uppercase tracking-wider bg-sky-500 hover:bg-sky-400 text-stone-950 font-bold rounded-xl shadow-lg border-b-4 border-sky-700 transition-transform active:scale-95"
+              >
+                <MessageSquare className="w-4 h-4 text-stone-950 stroke-[3]" />
+                <span>Book Matchday Seats · WhatsApp: 076 294 5349</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Central Booking & Location Bar */}
+        <div className="rounded-3xl bg-gradient-to-r from-[#0b1736] via-[#091533] to-[#0b1736] border-2 border-amber-400/60 p-6 sm:p-10 shadow-2xl">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <span className="text-xs font-funky text-amber-400 uppercase tracking-widest">
+                All Bookings via WhatsApp · Instant Confirmation
+              </span>
+              <h3 className="text-2xl sm:text-4xl font-funky text-white mt-1">
+                LOCK IN YOUR TABLE AT 289 FOX STREET
+              </h3>
+              <p className="mt-2 text-sm text-blue-200/90 font-medium">
+                Reserve your table for Hangover Tuesday Game Night or the next big sports screening.
+                We are open till late in Jeppestown / Maboneng!
+              </p>
+            </div>
+
+            {/* Quick interactive booking form that opens WhatsApp with pre-filled message */}
+            <form onSubmit={handleWhatsAppBooking} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               <div>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-funky text-amber-400 uppercase tracking-widest">
-                    Direct Booking · 076 294 5349
-                  </span>
-                  <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] font-bold">
-                    WhatsApp Fast Confirmation
-                  </span>
-                </div>
-
-                <h3 className="text-2xl font-funky text-white leading-tight">
-                  BOOK A TABLE FOR YOUR CREW
-                </h3>
-                <p className="mt-1 text-xs text-blue-200/80 font-medium">
-                  Tables fill up fast for game nights and big weekend match screenings. Secure your spot via WhatsApp directly with the kitchen!
-                </p>
-
-                {/* Interactive Booking Form */}
-                <form onSubmit={handleWhatsAppBooking} className="mt-6 space-y-4">
-                  <div>
-                    <label className="block text-xs font-funky text-blue-200 uppercase tracking-wider mb-1">
-                      Your Name / Crew Name
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="e.g. Kagiso &amp; The Boys"
-                      value={contactName}
-                      onChange={(e) => setContactName(e.target.value)}
-                      className="w-full px-3.5 py-2 text-xs bg-blue-950 border-2 border-blue-800 rounded-xl text-white placeholder-blue-400/40 focus:outline-none focus:border-amber-400 font-medium transition-colors"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-funky text-blue-200 uppercase tracking-wider mb-1">
-                      Select Event
-                    </label>
-                    <select
-                      value={eventType}
-                      onChange={(e) => setEventType(e.target.value)}
-                      className="w-full px-3.5 py-2 text-xs bg-blue-950 border-2 border-blue-800 rounded-xl text-white focus:outline-none focus:border-amber-400 font-medium transition-colors"
-                    >
-                      <option value="Hangover Tuesday Game Night">Hangover Tuesday Game Night</option>
-                      <option value="Live Football / PSL Match Screening">Live Football / PSL Match Screening</option>
-                      <option value="Rugby Championship Screening">Rugby Championship Screening</option>
-                      <option value="Crew Feast & Food Hangout">Crew Feast &amp; Food Hangout</option>
-                    </select>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-3">
-                    <div>
-                      <label className="block text-xs font-funky text-blue-200 uppercase tracking-wider mb-1">
-                        Crew Size
-                      </label>
-                      <select
-                        value={crewSize}
-                        onChange={(e) => setCrewSize(e.target.value)}
-                        className="w-full px-3.5 py-2 text-xs bg-blue-950 border-2 border-blue-800 rounded-xl text-white focus:outline-none focus:border-amber-400 font-medium"
-                      >
-                        <option value="2">2 People</option>
-                        <option value="4">4 People (Table)</option>
-                        <option value="6">6 People (Booth)</option>
-                        <option value="8+">8+ People (Crew Table)</option>
-                        <option value="12+">12+ People (Full Area)</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-funky text-blue-200 uppercase tracking-wider mb-1">
-                        Time
-                      </label>
-                      <select
-                        value={bookingTime}
-                        onChange={(e) => setBookingTime(e.target.value)}
-                        className="w-full px-3.5 py-2 text-xs bg-blue-950 border-2 border-blue-800 rounded-xl text-white focus:outline-none focus:border-amber-400 font-medium"
-                      >
-                        <option value="17:00">5:00 PM</option>
-                        <option value="18:30">6:30 PM</option>
-                        <option value="19:30">7:30 PM</option>
-                        <option value="20:30">8:30 PM</option>
-                        <option value="21:30">9:30 PM (Late Night)</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-funky text-blue-200 uppercase tracking-wider mb-1">
-                      Day
-                    </label>
-                    <div className="grid grid-cols-4 gap-2 text-xs font-funky text-center">
-                      {['Tuesday', 'Friday', 'Saturday', 'Sunday'].map((day) => (
-                        <button
-                          key={day}
-                          type="button"
-                          onClick={() => setSelectedDay(day)}
-                          className={`py-2 rounded-xl border-2 transition-all ${
-                            selectedDay === day
-                              ? 'bg-amber-400 border-amber-400 text-stone-950 font-bold'
-                              : 'bg-blue-950 border-blue-800/60 text-blue-200 hover:bg-blue-900'
-                          }`}
-                        >
-                          {day.slice(0, 3)}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full mt-2 py-3.5 px-4 text-xs font-funky uppercase tracking-wider btn-3d-gold rounded-xl flex items-center justify-center gap-2.5 shadow-xl shadow-amber-500/25"
-                  >
-                    <MessageSquare className="w-4 h-4 text-stone-950 stroke-[3]" />
-                    <span>Book via WhatsApp · 076 294 5349</span>
-                  </button>
-                </form>
+                <label className="block text-xs font-funky text-blue-200 uppercase tracking-wider mb-1">
+                  Name / Crew
+                </label>
+                <input
+                  type="text"
+                  required
+                  placeholder="e.g. Kagiso &amp; Squad"
+                  value={contactName}
+                  onChange={(e) => setContactName(e.target.value)}
+                  className="w-full px-3.5 py-2.5 text-xs bg-blue-950 border-2 border-blue-800 rounded-xl text-white placeholder-blue-400/40 focus:outline-none focus:border-amber-400 font-medium"
+                />
               </div>
 
-              {/* Direct Call & Socials Pill */}
-              <div className="mt-6 pt-4 border-t border-blue-900/60 flex items-center justify-between text-xs text-blue-200/80 font-medium">
-                <div>
-                  <span>WhatsApp: </span>
-                  <a href={`tel:${STORE_INFO.phoneRaw}`} className="text-white font-bold hover:text-amber-400">
-                    {STORE_INFO.phone}
-                  </a>
+              <div>
+                <label className="block text-xs font-funky text-blue-200 uppercase tracking-wider mb-1">
+                  Event
+                </label>
+                <select
+                  value={eventType}
+                  onChange={(e) => setEventType(e.target.value)}
+                  className="w-full px-3.5 py-2.5 text-xs bg-blue-950 border-2 border-blue-800 rounded-xl text-white focus:outline-none focus:border-amber-400 font-medium"
+                >
+                  <option value="Hangover Tuesday Game Night">Hangover Tuesday Game Night</option>
+                  <option value="Live Football / PSL Match">Live Football / PSL Match</option>
+                  <option value="Springbok Rugby Match">Springbok Rugby Match</option>
+                  <option value="Late Night Crew Feast">Late Night Crew Feast</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-xs font-funky text-blue-200 uppercase tracking-wider mb-1">
+                  Day &amp; Crew Size
+                </label>
+                <div className="grid grid-cols-2 gap-2">
+                  <select
+                    value={selectedDay}
+                    onChange={(e) => setSelectedDay(e.target.value)}
+                    className="w-full px-2 py-2.5 text-xs bg-blue-950 border-2 border-blue-800 rounded-xl text-white focus:outline-none focus:border-amber-400 font-medium"
+                  >
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                    <option value="Tonight">Tonight</option>
+                  </select>
+
+                  <select
+                    value={crewSize}
+                    onChange={(e) => setCrewSize(e.target.value)}
+                    className="w-full px-2 py-2.5 text-xs bg-blue-950 border-2 border-blue-800 rounded-xl text-white focus:outline-none focus:border-amber-400 font-medium"
+                  >
+                    <option value="2">2 ppl</option>
+                    <option value="4">4 ppl</option>
+                    <option value="6">6 ppl</option>
+                    <option value="8+">8+ ppl</option>
+                  </select>
                 </div>
-                <div className="text-amber-400 font-funky text-[11px]">
-                  <span>@chubbyboyz_za</span>
-                </div>
+              </div>
+
+              <div className="flex items-end">
+                <button
+                  type="submit"
+                  className="w-full py-3 px-4 text-xs font-funky uppercase tracking-wider btn-3d-gold rounded-xl flex items-center justify-center gap-2 shadow-xl shadow-amber-500/25 h-[42px]"
+                >
+                  <MessageSquare className="w-4 h-4 text-stone-950 stroke-[3]" />
+                  <span>Book: 076 294 5349</span>
+                </button>
+              </div>
+            </form>
+
+            {/* Quick contact / social proof strip */}
+            <div className="mt-8 pt-6 border-t border-blue-900/60 flex flex-wrap items-center justify-between gap-4 text-xs font-medium text-blue-200/80">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-amber-400 shrink-0" />
+                <span>289 Fox Street, Jeppestown, Johannesburg</span>
+              </div>
+              <div className="flex items-center gap-4">
+                <span>WhatsApp: <strong className="text-white">{STORE_INFO.phone}</strong></span>
+                <span className="text-blue-600">·</span>
+                <span className="text-amber-400 font-funky">@chubbyboyz_za (IG &amp; TikTok)</span>
               </div>
             </div>
           </div>
