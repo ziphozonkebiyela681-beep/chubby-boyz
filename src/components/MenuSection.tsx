@@ -94,22 +94,22 @@ export const MenuSection: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3">
             <a
               href={`https://wa.me/${STORE_INFO.whatsappNumber}?text=Hey%20Chubby%20Boyz!%20I'd%20like%20to%20place%20an%20order%20for%20collection/delivery.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3 text-xs font-funky uppercase tracking-wider btn-3d-gold rounded-xl shadow-lg shrink-0"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 text-xs font-funky uppercase tracking-wider btn-whatsapp-compact rounded-xl shadow-lg shrink-0"
             >
-              <MessageSquare className="w-4 h-4 text-stone-950 stroke-[3]" />
-              <span>Order via WhatsApp · 076 294 5349</span>
+              <MessageSquare className="w-4 h-4 text-white stroke-[2.5]" />
+              <span>WhatsApp Order: 076 294 5349</span>
             </a>
 
             <a
               href={STORE_INFO.uberEatsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3 text-xs font-funky uppercase tracking-wider text-white bg-emerald-600 hover:bg-emerald-500 transition-all rounded-xl border-b-4 border-emerald-800 shadow-lg shadow-emerald-950/50 shrink-0"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 text-xs font-funky uppercase tracking-wider text-white bg-emerald-600 hover:bg-emerald-500 transition-all rounded-xl border-b-2 sm:border-b-4 border-emerald-800 shadow-lg shadow-emerald-950/50 shrink-0"
             >
               <span>Scan on Uber Eats</span>
               <ExternalLink className="w-4 h-4" />
@@ -269,10 +269,10 @@ export const MenuSection: React.FC = () => {
                       <button
                         type="button"
                         onClick={() => handleOrderWhatsApp(item)}
-                        className="px-3.5 py-2.5 text-xs font-funky uppercase tracking-wider btn-3d-gold rounded-xl flex items-center gap-1.5 shadow-md active:scale-95 transition-transform"
+                        className="px-3.5 py-2.5 text-xs font-funky uppercase tracking-wider btn-whatsapp-compact rounded-xl flex items-center gap-1.5 shadow-md active:scale-95 transition-transform"
                         title="Order this item on WhatsApp"
                       >
-                        <MessageSquare className="w-3.5 h-3.5 text-stone-950 stroke-[3]" />
+                        <MessageSquare className="w-3.5 h-3.5 text-white stroke-[2.5]" />
                         <span>Order</span>
                       </button>
 

@@ -118,6 +118,42 @@
   border-bottom-width: 1px;
 }
 
+/* 3D Vibrant WhatsApp Green Button */
+.btn-3d-green {
+  background: linear-gradient(180deg, #34d399 0%, #10b981 40%, #059669 100%);
+  color: #ffffff;
+  border-bottom: 3px solid #064e3b;
+  box-shadow: 0 3px 10px rgba(16, 185, 129, 0.35);
+  transition: all 0.15s ease-out;
+}
+.btn-3d-green:hover {
+  background: linear-gradient(180deg, #6ee7b7 0%, #34d399 40%, #059669 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.45);
+}
+.btn-3d-green:active {
+  transform: translateY(2px);
+  border-bottom-width: 1px;
+  box-shadow: 0 1px 3px rgba(16, 185, 129, 0.2);
+}
+
+/* Authentic WhatsApp Brand Green (#25D366) */
+.btn-whatsapp-compact {
+  background: linear-gradient(180deg, #2ee06e 0%, #25d366 50%, #1da851 100%);
+  color: #ffffff;
+  border-bottom: 2px solid #0f5c2b;
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.35);
+  transition: all 0.15s ease-out;
+}
+.btn-whatsapp-compact:hover {
+  background: linear-gradient(180deg, #46e87f 0%, #2ee06e 50%, #1da851 100%);
+  transform: translateY(-1px);
+}
+.btn-whatsapp-compact:active {
+  transform: translateY(1.5px);
+  border-bottom-width: 1px;
+}
+
 /* Subtle scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

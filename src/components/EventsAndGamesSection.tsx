@@ -104,10 +104,10 @@ export const EventsAndGamesSection: React.FC = () => {
                 href={`https://wa.me/${STORE_INFO.whatsappNumber}?text=Hey%20Chubby%20Boyz!%20I%20want%20to%20reserve%20a%20table%20for%20our%20crew%20for%20Hangover%20Tuesday%20Game%20Night!`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 text-xs font-funky uppercase tracking-wider btn-3d-gold rounded-xl shadow-lg"
+                className="inline-flex items-center gap-2 px-6 py-3.5 text-xs font-funky uppercase tracking-wider btn-whatsapp-compact rounded-xl shadow-lg active:scale-95 transition-transform"
               >
-                <MessageSquare className="w-4 h-4 text-stone-950 stroke-[3]" />
-                <span>Reserve Game Night Table · WhatsApp: 076 294 5349</span>
+                <MessageSquare className="w-4 h-4 text-white stroke-[2.5]" />
+                <span>Reserve Game Night · WhatsApp: 076 294 5349</span>
               </a>
             </div>
           </div>
@@ -288,9 +288,9 @@ export const EventsAndGamesSection: React.FC = () => {
               <div className="flex items-end">
                 <button
                   type="submit"
-                  className="w-full py-3 px-4 text-xs font-funky uppercase tracking-wider btn-3d-gold rounded-xl flex items-center justify-center gap-2 shadow-xl shadow-amber-500/25 h-[42px]"
+                  className="w-full py-3 px-4 text-xs font-funky uppercase tracking-wider btn-whatsapp-compact rounded-xl flex items-center justify-center gap-2 shadow-xl shadow-emerald-500/20 h-[42px] active:scale-95 transition-transform"
                 >
-                  <MessageSquare className="w-4 h-4 text-stone-950 stroke-[3]" />
+                  <MessageSquare className="w-4 h-4 text-white stroke-[2.5]" />
                   <span>Book: 076 294 5349</span>
                 </button>
               </div>

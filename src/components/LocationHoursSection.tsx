@@ -112,12 +112,12 @@ export const LocationHoursSection: React.FC = () => {
             </div>
 
             {/* Funky 3D Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2">
               <a
                 href={STORE_INFO.googleMapsDirectionsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 text-xs font-funky uppercase tracking-wider btn-3d-gold rounded-xl shadow-lg whitespace-nowrap shrink-0"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-xs font-funky uppercase tracking-wider btn-3d-gold rounded-xl shadow-lg whitespace-nowrap active:scale-95 transition-transform"
               >
                 <Navigation className="w-4 h-4 text-stone-950 stroke-[3]" />
                 <span>Open in Google Maps</span>
@@ -127,10 +127,10 @@ export const LocationHoursSection: React.FC = () => {
                 href={`https://wa.me/${STORE_INFO.whatsappNumber}?text=Hey%20Chubby%20Boyz!%20I'd%20like%20to%20book%20a%20table%20at%20289%20Fox%20Street.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 text-xs font-funky uppercase tracking-wider btn-3d-blue rounded-xl shadow-lg whitespace-nowrap shrink-0"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-xs font-funky uppercase tracking-wider btn-whatsapp-compact rounded-xl shadow-lg whitespace-nowrap active:scale-95 transition-transform"
               >
                 <MessageSquare className="w-4 h-4 text-white stroke-[2.5]" />
-                <span>Book Table (WhatsApp: 076 294 5349)</span>
+                <span>WhatsApp Booking: 076 294 5349</span>
               </a>
             </div>
 

@@ -22,7 +22,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#060c1d] text-blue-50 flex flex-col font-sans">
+    <div className="min-h-screen bg-[#060c1d] text-blue-50 flex flex-col font-sans overflow-x-hidden w-full">
       {/* 1-Row 3-Zone Top Navigation with WhatsApp Fast Booking */}
       <Navbar />
 
