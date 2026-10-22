@@ -1,11 +1,11 @@
 import { MenuItem } from '../types';
 
 export const BRAND_LOGO = '/assets/aistudio/chubby_boyz_logo_clean.png';
-export const HERO_IMAGE = '/src/assets/images/hero_chubbyz_food_1792536267814.jpg';
-export const GATSBY_IMAGE = '/src/assets/images/food_masala_beef_gatsby_1792540739599.jpg';
-export const HANGOVER_TUESDAY_IMAGE = '/src/assets/images/hangover_tuesday_games_vibe_1792662865817.jpg';
-export const SPORTS_SCREENING_IMAGE = '/src/assets/images/live_sports_screening_match_1792662866269.jpg';
-export const EVENT_GAME_NIGHT_IMAGE = '/src/assets/images/hangover_tuesday_games_vibe_1792662865817.jpg';
+export const HERO_IMAGE = '/assets/images/hero_chubbyz_food_1792536267814.jpg';
+export const GATSBY_IMAGE = '/assets/images/food_masala_beef_gatsby_1792540739599.jpg';
+export const HANGOVER_TUESDAY_IMAGE = '/assets/images/hangover_tuesday_games_vibe_1792662865817.jpg';
+export const SPORTS_SCREENING_IMAGE = '/assets/images/live_sports_screening_match_1792662866269.jpg';
+export const EVENT_GAME_NIGHT_IMAGE = '/assets/images/hangover_tuesday_games_vibe_1792662865817.jpg';
 
 export const COMMON_BURGER_ADDONS = [
   { name: 'Extra Cheddar Cheese Slice', price: 10 },
@@ -33,7 +33,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryLabel: 'Smash Burgers',
     price: 70.0,
     description: '2 Smashed Beef Patty, 2 American Cheese, Pickles, Chubby Boyz Signature Sauce, Toasted Brioche Bun.',
-    image: '/src/assets/images/food_chubby_classic_burger_1792536269342.jpg',
+    image: '/assets/images/food_chubby_classic_burger_1792536269342.jpg',
     isPopular: true,
     spiceLevel: 'None',
     tags: ['2 Smashed Patties', '2 American Cheese', 'Signature Sauce', 'Brioche Bun'],
@@ -46,7 +46,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryLabel: 'Smash Burgers',
     price: 85.0,
     description: '3 Smashed Beef Patty, 2 American Cheese, Bacon, Pickles, Caramelised Onions, Chubby Boyz Signature Sauce, Toasted Brioche Bun.',
-    image: '/src/assets/images/food_chubby_classic_burger_1792536269342.jpg',
+    image: '/assets/images/food_chubby_classic_burger_1792536269342.jpg',
     isPopular: true,
     spiceLevel: 'None',
     tags: ['3 Smashed Patties', 'Smoked Bacon', 'Caramelised Onions', 'Brioche Bun'],
@@ -59,7 +59,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryLabel: 'Smash Burgers',
     price: 105.0,
     description: '5 Smashed Beef Patty, Bacon, American Cheese, Pickles, Caramelised Onions, Mushroom Sauce, Toasted Brioche Bun.',
-    image: '/src/assets/images/food_big_boy_smash_1792537601639.jpg',
+    image: '/assets/images/food_big_boy_smash_1792537601639.jpg',
     isPopular: true,
     spiceLevel: 'None',
     tags: ['5 Smashed Patties', 'Crispy Bacon', 'Creamy Mushroom Sauce', 'Heavyweight'],
@@ -72,7 +72,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryLabel: 'Smash Burgers',
     price: 75.0,
     description: 'Crumbed Butter Chicken Patty, American Cheese, Pickles, Caramelised Onions, Coleslaw (Red Cabbage).',
-    image: '/src/assets/images/food_butter_chicken_burger_1792537603760.jpg',
+    image: '/assets/images/food_butter_chicken_burger_1792537603760.jpg',
     spiceLevel: 'Mild',
     tags: ['Crumbed Butter Chicken', 'American Cheese', 'Red Cabbage Coleslaw'],
     availableAddons: COMMON_BURGER_ADDONS,
@@ -86,7 +86,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryLabel: 'Spicy Burgers',
     price: 85.0,
     description: 'Double Trouble with Chilli & Spicey Sauce. Fire smash for real heat lovers.',
-    image: '/src/assets/images/food_chilli_bomb_burger_1792537603291.jpg',
+    image: '/assets/images/food_chilli_bomb_burger_1792537603291.jpg',
     spiceLevel: 'Fiery',
     isPopular: true,
     tags: ['Double Trouble Base', 'Chilli & Spicey Sauce', 'Fiery Kick'],
@@ -101,7 +101,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryLabel: 'Kotas',
     price: 85.0,
     description: '2 Smashed Beef Patty, Russian, Polony, Egg, Cheese, Chips packed into an authentic fresh quarter loaf.',
-    image: '/src/assets/images/food_chubby_smash_kota_1792536269978.jpg',
+    image: '/assets/images/food_chubby_smash_kota_1792536269978.jpg',
     isPopular: true,
     spiceLevel: 'Mild',
     tags: ['2 Smash Patties', 'Russian Sausage', 'Polony', 'Farm Egg', 'Chips', 'Cheese'],
@@ -154,7 +154,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryLabel: 'Wings',
     price: 30.0,
     description: 'Tender chicken wings tossed in your choice of signature sticky sauce — BBQ, Sweet Chilli, Buffalo, or Peri-Peri.',
-    image: '/src/assets/images/food_sticky_wings_1792536270226.jpg',
+    image: '/assets/images/food_sticky_wings_1792536270226.jpg',
     isPopular: true,
     spiceLevel: 'Mild',
     tags: ['Tender Chicken Wings', 'Choice of 4 Sauces', 'BBQ / Sweet Chilli / Buffalo / Peri-Peri'],
@@ -172,7 +172,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryLabel: 'Loaded Fries',
     price: 30.0,
     description: 'Crispy Golden Fries smothered in rich, Creamy Cheese Sauce and topped with a generous layer of Melted Cheese, Jalapeno and Bacon Bites.',
-    image: '/src/assets/images/food_babalaaz_slap_chips_1792536270307.jpg',
+    image: '/assets/images/food_babalaaz_slap_chips_1792536270307.jpg',
     isPopular: true,
     spiceLevel: 'Spicy',
     tags: ['Creamy Cheese Sauce', 'Melted Cheese Layer', 'Jalapeno & Bacon Bites'],
@@ -190,7 +190,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryLabel: 'Slap Chips',
     price: 35.0,
     description: 'Golden soft Jozi slap chips tossed in salt, brown vinegar, and spicy chip seasoning.',
-    image: '/src/assets/images/food_classic_slap_chips_1792537604566.jpg',
+    image: '/assets/images/food_classic_slap_chips_1792537604566.jpg',
     tags: ['Traditional Slap Style', 'Salt & Vinegar', 'Chip Seasoning'],
     sizes: [
       { label: 'Small', price: 35.0 },
@@ -206,7 +206,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryLabel: 'Slap Chips',
     price: 55.0,
     description: 'The Fox Street hangover cure: soft slap chips loaded with sliced Russian sausage, crispy bacon pieces, and fresh sliced chillies.',
-    image: '/src/assets/images/food_babalaaz_slap_chips_1792536270307.jpg',
+    image: '/assets/images/food_babalaaz_slap_chips_1792536270307.jpg',
     isPopular: true,
     spiceLevel: 'Spicy',
     tags: ['Russian', 'Bacon', 'Chillies', 'Medium Box'],
@@ -220,7 +220,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryLabel: 'Beverages',
     price: 30.0,
     description: 'Ice-cold carbonated cans: Coca Cola, Fanta, Sprite, or Coke Zero.',
-    image: '/src/assets/images/food_refreshment_drinks_1792537623236.jpg',
+    image: '/assets/images/food_refreshment_drinks_1792537623236.jpg',
     tags: ['Coca Cola', 'Fanta', 'Sprite', 'Coke Zero'],
   },
   {
@@ -230,7 +230,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryLabel: 'Beverages',
     price: 30.0,
     description: 'Crisp, chilled tonic water mixer.',
-    image: '/src/assets/images/food_refreshment_drinks_1792537623236.jpg',
+    image: '/assets/images/food_refreshment_drinks_1792537623236.jpg',
     tags: ['Chilled Mixer', 'Tonic'],
   },
   {
@@ -240,7 +240,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryLabel: 'Beverages',
     price: 30.0,
     description: 'Sweet and tangy sparkling lemonade refreshment.',
-    image: '/src/assets/images/food_refreshment_drinks_1792537623236.jpg',
+    image: '/assets/images/food_refreshment_drinks_1792537623236.jpg',
     tags: ['Citrus Fizz', 'Lemonade'],
   },
   {
@@ -250,7 +250,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryLabel: 'Beverages',
     price: 35.0,
     description: 'Vitalizes body and mind for late night gaming and sports screenings.',
-    image: '/src/assets/images/food_refreshment_drinks_1792537623236.jpg',
+    image: '/assets/images/food_refreshment_drinks_1792537623236.jpg',
     tags: ['Energy Drink', 'Chilled Can'],
   },
   {
@@ -260,7 +260,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryLabel: 'Beverages',
     price: 25.0,
     description: 'Bottled pure still mineral water.',
-    image: '/src/assets/images/food_refreshment_drinks_1792537623236.jpg',
+    image: '/assets/images/food_refreshment_drinks_1792537623236.jpg',
     tags: ['Pure Water', 'Bottled'],
   },
   {
@@ -270,7 +270,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryLabel: 'Beverages',
     price: 15.0,
     description: 'Serving of clean ice cubes to keep your drinks ice-cold.',
-    image: '/src/assets/images/food_refreshment_drinks_1792537623236.jpg',
+    image: '/assets/images/food_refreshment_drinks_1792537623236.jpg',
     tags: ['Ice Cold', 'Add to drinks'],
   },
 ];

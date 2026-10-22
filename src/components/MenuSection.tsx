@@ -11,7 +11,7 @@ import {
   Info,
 } from 'lucide-react';
 import { MenuItem } from '../types';
-import { MENU_ITEMS, STORE_INFO } from '../data/menuData';
+import { MENU_ITEMS, STORE_INFO, HERO_IMAGE } from '../data/menuData';
 
 const CATEGORIES = [
   { id: 'all', label: 'All Items' },
@@ -198,6 +198,12 @@ export const MenuSection: React.FC = () => {
                     alt={item.name}
                     referrerPolicy="no-referrer"
                     loading="lazy"
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (!target.src.includes('hero_chubbyz_food')) {
+                        target.src = HERO_IMAGE;
+                      }
+                    }}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0b1736] via-transparent to-transparent opacity-60" />
