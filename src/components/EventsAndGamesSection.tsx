@@ -76,10 +76,10 @@ export const EventsAndGamesSection: React.FC = () => {
             {/* Evocative passage describing atmosphere */}
             <div className="space-y-4 text-sm sm:text-base text-blue-100/90 leading-relaxed font-medium">
               <p>
-                Step inside 289 Fox Street as the sun dips below the Joburg skyline. The warm neon glow of the Chubby Boyz sign reflects across cobalt brick walls, filling the room with an irresistible, electric hum. Hangover Tuesday is where the entire city comes to decompress, laugh without boundaries, and leave weekday stress at the door.
+                Step inside 289 Fox Street as the sun dips below the Johannesburg skyline. Beneath warm geometric wire-cage Edison chandeliers and classic matte charcoal panelled walls, our long ivory channel-tufted leather banquette booths and modern grey bucket chairs welcome you into an electric, stylish late-night haven. Hangover Tuesday is where the city gathers to decompress, laugh without boundaries, and leave weekday stress at the door.
               </p>
               <p>
-                Across rustic timber tables, colorful dice clatter on trays, cards are fiercely dealt in heated Uno and Morabaraba face-offs, and uproarious bursts of laughter erupt as friends act out animated charades and try to outwit each other. Between competitive rounds, platters of golden loaded slap chips, 5-patty Big Boy smash burgers, and icy sodas get passed around the circle. It is pure camaraderie, unpretentious warmth, and good vibes that roll on deep into the early hours.
+                Across warm honey-timber dining tables, colorful dice clatter, cards are fiercely dealt in heated Uno face-offs, and uproarious bursts of laughter erupt as friends act out animated charades and try to outwit each other. Between competitive rounds, platters of golden loaded slap chips, 5-patty Big Boy smash burgers, and icy sodas get passed around the table. With convenient charging ports at every booth and comfort food flowing, the good vibes roll on deep into the night.
               </p>
             </div>
 
@@ -170,10 +170,10 @@ export const EventsAndGamesSection: React.FC = () => {
             {/* Evocative passage describing atmosphere */}
             <div className="space-y-4 text-sm sm:text-base text-blue-100/90 leading-relaxed font-medium">
               <p>
-                When matchday arrives, 289 Fox Street transforms into a miniature stadium in the heart of Johannesburg. Wall-to-wall high-definition projectors beam every tackle, strike, and photo-finish, while stadium-grade audio brings every whistle and roar straight to your wooden bench.
+                When matchday arrives, 289 Fox Street turns into Johannesburg&apos;s ultimate big-game lounge. Settle into our ivory channel-tufted leather banquettes or pull up stylish grey dining chairs along the honey-timber tables beneath our ambient geometric chandeliers. High-definition wall screens beam every tackle, strike, and photo-finish, while crisp surround audio brings every stadium whistle and chant straight to your table.
               </p>
               <p>
-                From heated Soweto Derbies and Premier League clashes to adrenaline-fueled Springbok Rugby test matches, the atmosphere is pure fire. Supporter jerseys fill the booths, hands wave flags in unison, and strangers turn into brothers over every stoppage-time goal. Order the R350 Masala Tika Beef Gatsby or the Chubby Buddies Combo to feed the entire table while cold beverages keep the celebrations flowing.
+                From heated Soweto Derbies and Premier League showdowns to adrenaline-fueled Springbok Rugby test matches, the energy is electric. Supporters in green and gold pack the booths, high-fives ring out across the dining room, and strangers turn into brothers over every stoppage-time goal. Order the R350 Masala Tika Beef Gatsby or the Chubby Buddies Combo to feed the whole crew while cold beverages keep the celebrations buzzing.
               </p>
             </div>
 

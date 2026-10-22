@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { MapPin, Clock, Phone, ExternalLink, Navigation, CheckCircle2, Sparkles, MessageSquare } from 'lucide-react';
-import { STORE_INFO, BRAND_LOGO } from '../data/menuData';
+import { STORE_INFO, BRAND_LOGO, CHUBBY_BOYZ_INTERIOR_IMAGE } from '../data/menuData';
 import { getUberEatsDeepLink, openUberEatsApp } from '../utils/uberEats';
 import { getStoreStatus } from '../utils/storeHours';
 
@@ -248,6 +248,30 @@ export const LocationHoursSection: React.FC = () => {
                   loading="lazy"
                   referrerPolicy="no-referrer"
                 />
+              </div>
+            </div>
+
+            {/* Real Authentic Dine-In Interior Card */}
+            <div className="p-4 sm:p-5 rounded-3xl bg-blue-950/80 border-2 border-blue-800/50 flex flex-col sm:flex-row items-center gap-4 shadow-xl">
+              <div className="w-full sm:w-28 h-36 sm:h-28 rounded-2xl overflow-hidden border-2 border-amber-400/50 shrink-0">
+                <img
+                  src={CHUBBY_BOYZ_INTERIOR_IMAGE}
+                  alt="Authentic Chubby Boyz Interior at 289 Fox Street"
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="space-y-1 text-center sm:text-left flex-1">
+                <div className="inline-flex items-center gap-1.5 text-[11px] font-funky text-amber-400 uppercase tracking-wider">
+                  <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                  <span>Real Dine-In Setup</span>
+                </div>
+                <h4 className="text-sm sm:text-base font-funky text-white">
+                  CREW TABLES &amp; LEATHER BOOTHS
+                </h4>
+                <p className="text-xs text-blue-200/80 font-medium leading-relaxed">
+                  Matte black walls, channel-tufted cream booths, timber tables, and charging outlets at every table. Open till late!
+                </p>
               </div>
             </div>
           </div>

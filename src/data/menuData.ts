@@ -3,9 +3,10 @@ import { MenuItem } from '../types';
 export const BRAND_LOGO = '/assets/aistudio/chubby_boyz_logo_clean.png';
 export const HERO_IMAGE = '/assets/images/hero_chubbyz_food_1792536267814.jpg';
 export const GATSBY_IMAGE = '/assets/images/food_masala_beef_gatsby_1792540739599.jpg';
-export const HANGOVER_TUESDAY_IMAGE = '/assets/images/hangover_tuesday_games_vibe_1792662865817.jpg';
-export const SPORTS_SCREENING_IMAGE = '/assets/images/live_sports_screening_match_1792662866269.jpg';
-export const EVENT_GAME_NIGHT_IMAGE = '/assets/images/hangover_tuesday_games_vibe_1792662865817.jpg';
+export const HANGOVER_TUESDAY_IMAGE = '/assets/images/hangover_game_night_1792690379011.jpg';
+export const SPORTS_SCREENING_IMAGE = '/assets/images/sports_screening_interior_1792690394394.jpg';
+export const EVENT_GAME_NIGHT_IMAGE = '/assets/images/hangover_game_night_1792690379011.jpg';
+export const CHUBBY_BOYZ_INTERIOR_IMAGE = '/assets/images/chubby_boyz_interior_real.jpg';
 
 export const COMMON_BURGER_ADDONS = [
   { name: 'Extra Cheddar Cheese Slice', price: 10 },
