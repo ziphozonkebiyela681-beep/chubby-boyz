@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MessageSquare, ExternalLink, Menu, X, Phone, MapPin } from 'lucide-react';
 import { BRAND_LOGO, STORE_INFO } from '../data/menuData';
+import { getUberEatsDeepLink, openUberEatsApp } from '../utils/uberEats';
 
 export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -82,12 +83,13 @@ export const Navbar: React.FC = () => {
               Location &amp; Hours
             </a>
             <a
-              href={STORE_INFO.uberEatsUrl}
+              href={getUberEatsDeepLink()}
+              onClick={openUberEatsApp}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-emerald-400 hover:scale-105 transition-all whitespace-nowrap shrink-0 drop-shadow-sm flex items-center gap-1"
+              className="hover:text-emerald-400 hover:scale-105 transition-all whitespace-nowrap shrink-0 drop-shadow-sm flex items-center gap-1.5"
             >
-              <span>Uber Eats</span>
+              <span>Uber Eats App</span>
               <ExternalLink className="w-3 h-3" />
             </a>
           </nav>
@@ -188,14 +190,22 @@ export const Navbar: React.FC = () => {
               </a>
 
               <a
-                href={STORE_INFO.uberEatsUrl}
+                href={getUberEatsDeepLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={closeMenu}
-                className="py-3 px-4 rounded-xl bg-emerald-950/60 border border-emerald-500/40 text-emerald-300 hover:bg-emerald-900/60 flex items-center justify-between transition-colors"
+                onClick={(e) => {
+                  closeMenu();
+                  openUberEatsApp(e);
+                }}
+                className="py-3 px-4 rounded-xl bg-emerald-950/60 border border-emerald-500/40 text-emerald-300 hover:bg-emerald-900/60 flex items-center justify-between transition-colors group"
               >
-                <span>Order on Uber Eats</span>
-                <ExternalLink className="w-4 h-4 text-emerald-400" />
+                <div className="flex items-center gap-2">
+                  <span className="font-bold">Order on Uber Eats App</span>
+                  <span className="text-[10px] font-funky px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                    App
+                  </span>
+                </div>
+                <ExternalLink className="w-4 h-4 text-emerald-400 group-hover:translate-x-0.5 transition-transform" />
               </a>
             </nav>
 

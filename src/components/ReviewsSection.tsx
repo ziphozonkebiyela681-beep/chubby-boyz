@@ -1,6 +1,7 @@
 import React from 'react';
 import { Star, MessageSquareQuote, ExternalLink, Sparkles } from 'lucide-react';
 import { REVIEWS, STORE_INFO, BRAND_LOGO } from '../data/menuData';
+import { getUberEatsDeepLink, openUberEatsApp } from '../utils/uberEats';
 
 export const ReviewsSection: React.FC = () => {
   return (
@@ -90,12 +91,13 @@ export const ReviewsSection: React.FC = () => {
           </div>
 
           <a
-            href={STORE_INFO.uberEatsUrl}
+            href={getUberEatsDeepLink()}
+            onClick={openUberEatsApp}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-xs font-funky uppercase tracking-wider btn-3d-gold rounded-xl shadow-lg shrink-0 whitespace-nowrap"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-xs font-funky uppercase tracking-wider btn-3d-gold rounded-xl shadow-lg shrink-0 whitespace-nowrap active:scale-95"
           >
-            <span>Review on Uber Eats</span>
+            <span>Review on Uber Eats App</span>
             <ExternalLink className="w-4 h-4 text-stone-950 stroke-[3]" />
           </a>
         </div>

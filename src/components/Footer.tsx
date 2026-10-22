@@ -1,6 +1,7 @@
 import React from 'react';
 import { MapPin, Phone, ExternalLink, MessageSquare } from 'lucide-react';
 import { STORE_INFO, BRAND_LOGO } from '../data/menuData';
+import { getUberEatsDeepLink, openUberEatsApp } from '../utils/uberEats';
 
 export const Footer: React.FC = () => {
   return (
@@ -118,13 +119,14 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a
-                  href={STORE_INFO.uberEatsUrl}
+                  href={getUberEatsDeepLink()}
+                  onClick={openUberEatsApp}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-amber-400 transition-colors flex items-center gap-1.5"
                 >
-                  <span>Uber Eats Delivery</span>
-                  <ExternalLink className="w-3 h-3" />
+                  <span>Uber Eats App (Order Online)</span>
+                  <ExternalLink className="w-3 h-3 text-emerald-400" />
                 </a>
               </li>
               <li className="pt-2 text-amber-400 font-funky text-[11px] uppercase tracking-wider">
