@@ -1,8 +1,10 @@
-import React from 'react';
-import { Flame, Heart, Sparkles, Trophy, MapPin, Zap, Lamp, MessageSquare, CheckCircle2 } from 'lucide-react';
-import { BRAND_LOGO, CHUBBY_BOYZ_INTERIOR_IMAGE, STORE_INFO } from '../data/menuData';
+import React, { useState } from 'react';
+import { Flame, Heart, Sparkles, Trophy, MapPin, Zap, Lamp, MessageSquare, CheckCircle2, Eye } from 'lucide-react';
+import { BRAND_LOGO, CHUBBY_BOYZ_INTERIOR_IMAGE, CHUBBY_BOYZ_EXTERIOR_IMAGE, STORE_INFO } from '../data/menuData';
 
 export const StorySection: React.FC = () => {
+  const [activePhoto, setActivePhoto] = useState<'exterior' | 'interior'>('exterior');
+
   return (
     <section id="story" className="py-16 lg:py-24 bg-[#050b18] border-b-2 border-blue-900/40 scroll-mt-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,7 +83,7 @@ export const StorySection: React.FC = () => {
                   Chef Chubby · The Big Boss
                 </div>
                 <h3 className="text-2xl font-funky text-white leading-tight">
-                  "IF IT AIN'T MESSY, IT AIN'T CHUBBY!"
+                  &quot;IF IT AIN&apos;T MESSY, IT AIN&apos;T CHUBBY!&quot;
                 </h3>
                 <p className="text-xs text-blue-200/80 max-w-sm mx-auto font-medium leading-relaxed">
                   Chef hat, black shades, gold dollar pendant. Serving up authentic street food with personality and heavyweight portions.
@@ -108,32 +110,81 @@ export const StorySection: React.FC = () => {
           </div>
         </div>
 
-        {/* Authentic Restaurant Interior Showcase */}
+        {/* Authentic Restaurant Exterior & Interior Showcase */}
         <div className="mt-16 sm:mt-24 rounded-3xl bg-blue-950/40 border-2 border-amber-400/40 p-6 sm:p-10 shadow-2xl overflow-hidden relative">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            {/* Real Interior Photo with Authentic Badge */}
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="relative rounded-2xl overflow-hidden border-2 border-amber-400/60 shadow-2xl max-w-sm group">
-                <img
-                  src={CHUBBY_BOYZ_INTERIOR_IMAGE}
-                  alt="Authentic Chubby Boyz Interior at 289 Fox Street Jeppestown featuring channel-tufted leather booth seating, timber tables, and geometric chandeliers"
-                  referrerPolicy="no-referrer"
-                  className="w-full h-[480px] sm:h-[540px] object-cover transition-transform duration-700 group-hover:scale-103"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050b18] via-transparent to-transparent opacity-75" />
+            {/* Interactive Photo Frame (Outside & Inside Views) */}
+            <div className="lg:col-span-5 flex flex-col items-center">
+              {/* Photo View Selector Tabs */}
+              <div className="flex items-center gap-2 p-1.5 rounded-2xl bg-blue-900/60 border border-blue-700/60 mb-4 w-full max-w-sm shadow-inner">
+                <button
+                  type="button"
+                  onClick={() => setActivePhoto('exterior')}
+                  className={`flex-1 py-2 px-3 rounded-xl text-xs font-funky uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 ${
+                    activePhoto === 'exterior'
+                      ? 'bg-amber-400 text-stone-950 shadow-md font-bold'
+                      : 'text-blue-200 hover:text-white hover:bg-blue-800/40'
+                  }`}
+                >
+                  <Eye className="w-3.5 h-3.5" />
+                  <span>Outside Storefront</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setActivePhoto('interior')}
+                  className={`flex-1 py-2 px-3 rounded-xl text-xs font-funky uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 ${
+                    activePhoto === 'interior'
+                      ? 'bg-amber-400 text-stone-950 shadow-md font-bold'
+                      : 'text-blue-200 hover:text-white hover:bg-blue-800/40'
+                  }`}
+                >
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span>Inside Dine-In</span>
+                </button>
+              </div>
+
+              {/* Display Image Card */}
+              <div className="relative rounded-2xl overflow-hidden border-2 border-amber-400/60 shadow-2xl w-full max-w-sm group">
+                {activePhoto === 'exterior' ? (
+                  <img
+                    src={CHUBBY_BOYZ_EXTERIOR_IMAGE}
+                    alt="Authentic Chubby Boyz Storefront Exterior at 289 Fox Street Jeppestown Maboneng at night with glowing circular logo sign and wide glass entrance"
+                    referrerPolicy="no-referrer"
+                    className="w-full h-[400px] sm:h-[480px] object-cover transition-transform duration-700 group-hover:scale-103"
+                  />
+                ) : (
+                  <img
+                    src={CHUBBY_BOYZ_INTERIOR_IMAGE}
+                    alt="Authentic Chubby Boyz Interior at 289 Fox Street Jeppestown featuring channel-tufted leather booth seating, timber tables, and geometric chandeliers"
+                    referrerPolicy="no-referrer"
+                    className="w-full h-[400px] sm:h-[480px] object-cover transition-transform duration-700 group-hover:scale-103"
+                  />
+                )}
                 
-                <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-950/80 border border-amber-400/60 text-[11px] font-funky text-amber-400 backdrop-blur-md uppercase tracking-wider">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050b18] via-transparent to-transparent opacity-80" />
+                
+                <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-950/85 border border-amber-400/60 text-[11px] font-funky text-amber-400 backdrop-blur-md uppercase tracking-wider">
                   <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-                  <span>Real 289 Fox St Dine-In Space</span>
+                  <span>
+                    {activePhoto === 'exterior'
+                      ? 'Fox Street Storefront'
+                      : 'Dine-In Lounge Interior'}
+                  </span>
                 </div>
 
                 <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-blue-950/90 border border-blue-700/60 backdrop-blur-md">
                   <div className="font-funky text-white text-sm flex items-center justify-between">
-                    <span className="text-amber-400">Chubby Boyz Dine-In</span>
-                    <span className="text-xs text-blue-200">Jeppestown, JHB</span>
+                    <span className="text-amber-400">
+                      {activePhoto === 'exterior'
+                        ? '289 Fox Street Storefront'
+                        : 'Chubby Boyz Dine-In'}
+                    </span>
+                    <span className="text-xs text-blue-200">Maboneng Precinct</span>
                   </div>
                   <p className="text-[11px] text-blue-200/90 mt-1 font-medium">
-                    Channel-tufted cream booths, timber crew tables, charging ports &amp; ambient Edison chandeliers.
+                    {activePhoto === 'exterior'
+                      ? 'Spot our glowing circular Chubby Boyz logo sign, wide glass entrance, and timber steps on Fox Street.'
+                      : 'Channel-tufted cream booths, timber crew tables, charging ports & ambient Edison chandeliers.'}
                   </p>
                 </div>
               </div>

@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { MapPin, Clock, Phone, ExternalLink, Navigation, CheckCircle2, Sparkles, MessageSquare } from 'lucide-react';
-import { STORE_INFO, BRAND_LOGO, CHUBBY_BOYZ_INTERIOR_IMAGE } from '../data/menuData';
+import { STORE_INFO, BRAND_LOGO, CHUBBY_BOYZ_INTERIOR_IMAGE, CHUBBY_BOYZ_EXTERIOR_IMAGE } from '../data/menuData';
 import { getUberEatsDeepLink, openUberEatsApp } from '../utils/uberEats';
 import { getStoreStatus } from '../utils/storeHours';
 
@@ -251,27 +251,54 @@ export const LocationHoursSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Real Authentic Dine-In Interior Card */}
-            <div className="p-4 sm:p-5 rounded-3xl bg-blue-950/80 border-2 border-blue-800/50 flex flex-col sm:flex-row items-center gap-4 shadow-xl">
-              <div className="w-full sm:w-28 h-36 sm:h-28 rounded-2xl overflow-hidden border-2 border-amber-400/50 shrink-0">
-                <img
-                  src={CHUBBY_BOYZ_INTERIOR_IMAGE}
-                  alt="Authentic Chubby Boyz Interior at 289 Fox Street"
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="space-y-1 text-center sm:text-left flex-1">
-                <div className="inline-flex items-center gap-1.5 text-[11px] font-funky text-amber-400 uppercase tracking-wider">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-                  <span>Real Dine-In Setup</span>
+            {/* Real Authentic Dual Gallery: Outside Storefront & Inside Dine-In */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Card 1: Spot Us Outside */}
+              <div className="p-4 rounded-3xl bg-blue-950/80 border-2 border-blue-800/50 flex flex-col gap-3 shadow-xl group">
+                <div className="relative w-full h-40 rounded-2xl overflow-hidden border-2 border-amber-400/50 shrink-0">
+                  <img
+                    src={CHUBBY_BOYZ_EXTERIOR_IMAGE}
+                    alt="Authentic Chubby Boyz Storefront Exterior at 289 Fox Street Jeppestown Maboneng"
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-stone-950/80 border border-amber-400/60 text-[10px] font-funky text-amber-400 backdrop-blur-md uppercase tracking-wider">
+                    Outside View
+                  </div>
                 </div>
-                <h4 className="text-sm sm:text-base font-funky text-white">
-                  CREW TABLES &amp; LEATHER BOOTHS
-                </h4>
-                <p className="text-xs text-blue-200/80 font-medium leading-relaxed">
-                  Matte black walls, channel-tufted cream booths, timber tables, and charging outlets at every table. Open till late!
-                </p>
+                <div className="space-y-1">
+                  <h4 className="text-sm font-funky text-white flex items-center justify-between">
+                    <span>SPOT US ON FOX STREET</span>
+                    <span className="text-[11px] text-amber-400 font-lilita">289 Fox St</span>
+                  </h4>
+                  <p className="text-xs text-blue-200/80 font-medium leading-relaxed">
+                    Look for our glowing circular logo sign hanging outside, wide glass entrance, and timber steps on the brick sidewalk.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 2: Step Inside */}
+              <div className="p-4 rounded-3xl bg-blue-950/80 border-2 border-blue-800/50 flex flex-col gap-3 shadow-xl group">
+                <div className="relative w-full h-40 rounded-2xl overflow-hidden border-2 border-amber-400/50 shrink-0">
+                  <img
+                    src={CHUBBY_BOYZ_INTERIOR_IMAGE}
+                    alt="Authentic Chubby Boyz Interior at 289 Fox Street with leather booths and timber tables"
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-stone-950/80 border border-amber-400/60 text-[10px] font-funky text-amber-400 backdrop-blur-md uppercase tracking-wider">
+                    Inside Lounge
+                  </div>
+                </div>
+                <div className="space-y-1">
+                  <h4 className="text-sm font-funky text-white flex items-center justify-between">
+                    <span>CREW BOOTHS &amp; BAR</span>
+                    <span className="text-[11px] text-sky-400 font-lilita">Open Late</span>
+                  </h4>
+                  <p className="text-xs text-blue-200/80 font-medium leading-relaxed">
+                    Channel-tufted cream booths, timber sharing tables, phone charging ports, and ambient Edison lighting.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

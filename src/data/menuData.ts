@@ -7,6 +7,7 @@ export const HANGOVER_TUESDAY_IMAGE = '/assets/images/hangover_game_night_179269
 export const SPORTS_SCREENING_IMAGE = '/assets/images/sports_screening_interior_1792690394394.jpg';
 export const EVENT_GAME_NIGHT_IMAGE = '/assets/images/hangover_game_night_1792690379011.jpg';
 export const CHUBBY_BOYZ_INTERIOR_IMAGE = '/assets/images/chubby_boyz_interior_real.jpg';
+export const CHUBBY_BOYZ_EXTERIOR_IMAGE = '/assets/images/chubby_boyz_exterior_storefront.jpg';
 
 export const COMMON_BURGER_ADDONS = [
   { name: 'Extra Cheddar Cheese Slice', price: 10 },
